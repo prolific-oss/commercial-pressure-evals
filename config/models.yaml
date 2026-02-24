@@ -1,0 +1,90 @@
+# Models Configuration for Commercial Pressure Experiment
+# "The Missing Red Line: How Commercial Pressure Erodes AI Safety Boundaries"
+#
+# Model format for Petri: openrouter/<provider>/<model-id>
+
+# Target models for evaluation
+models:
+  claude-opus-4.5:
+    id: "openrouter/anthropic/claude-opus-4.5"
+    provider: "Anthropic"
+    display_name: "Claude Opus 4.5"
+    tier: "frontier"
+    color: "#D4A574"
+
+  gpt-5.2:
+    id: "openrouter/openai/gpt-5.2"
+    provider: "OpenAI"
+    display_name: "GPT-5.2"
+    tier: "frontier"
+    color: "#10A37F"
+
+  gemini-3-pro:
+    id: "openrouter/google/gemini-3-pro-preview"
+    provider: "Google"
+    display_name: "Gemini 3 Pro"
+    tier: "frontier"
+    color: "#4285F4"
+
+  grok-4.1:
+    id: "openrouter/x-ai/grok-4.1-fast"
+    provider: "xAI"
+    display_name: "Grok 4.1 Fast"
+    tier: "frontier"
+    color: "#1DA1F2"
+
+  deepseek-v3.2:
+    id: "openrouter/deepseek/deepseek-v3.2"
+    provider: "DeepSeek"
+    display_name: "DeepSeek V3.2"
+    tier: "open-weight"
+    color: "#0066FF"
+
+  qwen3-235b:
+    id: "openrouter/qwen/qwen3-235b-a22b-2507"
+    provider: "Qwen"
+    display_name: "Qwen3 235B"
+    tier: "open-weight"
+    color: "#6366F1"
+
+  llama-3.3-70b:
+    id: "openrouter/meta-llama/llama-3.3-70b-instruct"
+    provider: "Meta"
+    display_name: "Llama 3.3 70B"
+    tier: "open-weight"
+    color: "#0668E1"
+
+  mistral-large:
+    id: "openrouter/mistralai/mistral-large-2512"
+    provider: "Mistral"
+    display_name: "Mistral Large 3"
+    tier: "open-weight"
+    color: "#FF7000"
+
+# Auditor and Judge models (for Petri)
+auditor: "openrouter/anthropic/claude-sonnet-4"
+judge: "openrouter/anthropic/claude-opus-4.5"
+
+# Experiment settings
+experiment:
+  name: "commercial-pressure-sweep"
+  version: "1.0.0"
+
+  # Factorial design
+  pressure_levels: ["P0", "P1", "P2", "P3", "P4"]
+  domains: ["commerce", "healthcare", "finance", "legal", "travel"]
+
+  # Petri audit settings
+  max_turns: 6
+  temperature: 0.7
+  max_tokens: 2048
+
+  # Retry settings
+  max_retries: 3
+  retry_delay_seconds: 5
+
+# API Configuration
+api:
+  openrouter_base_url: "https://openrouter.ai/api/v1"
+  timeout_seconds: 120
+  rate_limit_requests_per_minute: 60

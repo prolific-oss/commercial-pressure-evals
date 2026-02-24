@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-01-29T15:17:18.423950",
+  "total_transcripts": 1419,
+  "unique_scenarios": 160,
+  "models_tested": 8,
+  "pressure_levels": [
+    "P4",
+    "P3",
+    "P2",
+    "P0",
+    "P1"
+  ],
+  "domains": [
+    "commerce",
+    "legal",
+    "finance",
+    "healthcare",
+    "travel"
+  ],
+  "by_pressure": {
+    "mean": {
+      "P0": 1.076,
+      "P1": 1.702,
+      "P2": 3.321,
+      "P3": 5.291,
+      "P4": 6.492
+    },
+    "std": {
+      "P0": 0.396,
+      "P1": 1.452,
+      "P2": 2.283,
+      "P3": 2.818,
+      "P4": 3.315
+    },
+    "count": {
+      "P0": 278,
+      "P1": 275,
+      "P2": 277,
+      "P3": 278,
+      "P4": 311
+    }
+  },
+  "p0_mean": 1.076,
+  "p0_std": 0.396,
+  "p4_mean": 6.492,
+  "p4_std": 3.315,
+  "p0_to_p4_increase": 5.416,
+  "p0_to_p4_percent_increase": 503.6,
+  "by_model": {
+    "mean": {
+      "openrouter/anthropic/claude-opus-4.5": 1.025,
+      "openrouter/deepseek/deepseek-v3.2": 4.15,
+      "openrouter/google/gemini-3-pro-preview": 4.396,
+      "openrouter/meta-llama/llama-3.3-70b-instruct": 3.625,
+      "openrouter/mistralai/mistral-large-2512": 4.294,
+      "openrouter/openai/gpt-5.2": 1.956,
+      "openrouter/qwen/qwen3-235b-a22b-2507": 4.124,
+      "openrouter/x-ai/grok-4.1-fast": 5.15
+    },
+    "std": {
+      "openrouter/anthropic/claude-opus-4.5": 0.25,
+      "openrouter/deepseek/deepseek-v3.2": 3.23,
+      "openrouter/google/gemini-3-pro-preview": 3.423,
+      "openrouter/meta-llama/llama-3.3-70b-instruct": 2.76,
+      "openrouter/mistralai/mistral-large-2512": 3.134,
+      "openrouter/openai/gpt-5.2": 1.485,
+      "openrouter/qwen/qwen3-235b-a22b-2507": 3.174,
+      "openrouter/x-ai/grok-4.1-fast": 3.492
+    },
+    "count": {
+      "openrouter/anthropic/claude-opus-4.5": 160,
+      "openrouter/deepseek/deepseek-v3.2": 160,
+      "openrouter/google/gemini-3-pro-preview": 192,
+      "openrouter/meta-llama/llama-3.3-70b-instruct": 160,
+      "openrouter/mistralai/mistral-large-2512": 160,
+      "openrouter/openai/gpt-5.2": 160,
+      "openrouter/qwen/qwen3-235b-a22b-2507": 267,
+      "openrouter/x-ai/grok-4.1-fast": 160
+    }
+  },
+  "most_resistant_model": "openrouter/anthropic/claude-opus-4.5",
+  "most_resistant_score": 1.025,
+  "most_susceptible_model": "openrouter/x-ai/grok-4.1-fast",
+  "most_susceptible_score": 5.15,
+  "by_domain": {
+    "mean": {
+      "commerce": 3.236,
+      "finance": 4.022,
+      "healthcare": 4.186,
+      "legal": 3.363,
+      "travel": 3.486
+    },
+    "std": {
+      "commerce": 3.062,
+      "finance": 3.153,
+      "healthcare": 3.473,
+      "legal": 2.678,
+      "travel": 2.973
+    },
+    "count": {
+      "commerce": 368,
+      "finance": 229,
+      "healthcare": 322,
+      "legal": 212,
+      "travel": 288
+    }
+  }
+}
