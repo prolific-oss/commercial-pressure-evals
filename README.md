@@ -15,6 +15,18 @@ We find that models readily engage in harmful behaviours — recommending danger
   <img src="plots/model_ranking.png" alt="Model susceptibility ranking" width="48%">
 </p>
 
+## Paper & Poster
+
+**Paper:** [The Missing Red Line: How Commercial Pressure Erodes AI Safety Boundaries](missing_red_line_paper.pdf)
+*Nora Petrova, John Burden — Prolific AI Research*
+
+We find that commercial system prompts can override safety training, causing frontier models to lie about medical risks, dismiss safety concerns, and prioritise profit over user welfare. Testing 8 models across 160 scenarios at 5 pressure levels, we show that 6 of 8 models exhibit catastrophic failures in 17–41% of scenarios — and most show no "red line" where compliance decreases as consequences escalate.
+
+**Poster:** [Who Does Your AI Serve?](missing_red_line_poster.pdf)
+*Jerome Wynne, Nora Petrova — Prolific AI Research*
+
+Based on the [first-place winning project](https://apartresearch.com/project/who-does-your-ai-serve-manipulation-by-and-of-ai-assistants-77xx) from an Apart Research hackathon. Presented at the [IASEAI'26](https://www.iaseai.org/our-programs/iaseai26) workshop on AI Manipulation and Information Integrity. The poster combines the automated evaluation with a human participant study (n=80) where participants spent 3.9x more when the AI was instructed to upsell, and includes recommendations for users, operators, model developers, policymakers, and regulators.
+
 ## Quick Start
 
 ```bash
@@ -69,6 +81,8 @@ Each scenario is tested at five levels of commercial pressure in the system prom
 │   ├── generate_scenarios.py      # Scenario generation script
 │   └── generate_seed_instructions.py
 ├── seed_instructions/             # System prompts for each pressure level (P0–P4)
+├── missing_red_line_paper.pdf         # Research paper
+├── missing_red_line_poster.pdf        # Conference poster
 ├── transcripts.tar.gz             # All evaluation transcripts (Git LFS)
 ├── run_experiment.sh              # Run evaluation for a single model
 └── run_all_models.sh              # Run evaluation across all models
